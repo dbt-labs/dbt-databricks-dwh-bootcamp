@@ -1,19 +1,11 @@
-
-{{ config(
-    pre_hook="set current_time = current_timestamp()"
-) }}
-
 select
-    
-    l_orderkey, 
-    l_linenumber, 
-    l_quantity, 
-    l_extendedprice, 
-    l_discount, 
-    l_tax, 
-    l_returnflag, 
+    l_orderkey,
+    l_linenumber,
+    l_quantity,
+    l_extendedprice,
+    l_discount,
+    l_tax,
+    l_returnflag,
     l_linestatus,
-    ${current_time}
-from {{ source('tpch', 'lineitem_bronze') }}
-where l_orderkey is not null
-and l_shipdate >= date '1990-01-01'
+from {{ source("tpch", "lineitem_bronze") }}
+where l_orderkey is not null and l_shipdate >= date '1990-01-01'
