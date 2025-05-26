@@ -6,4 +6,4 @@ models:
       - name: discount
         tests:
           - accepted_values:
-              values: ['discounted','not_discounted']
+              values: ["discounted", "not_discounted"]
