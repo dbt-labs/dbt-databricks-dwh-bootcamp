@@ -2,8 +2,8 @@ version: 2
 
 sources:
   - name: tpch
-    database: dev_bootcamp  
-    schema: tpch  
+    database: bootcamp  
+    schema: dev_bootcamp  
     tables:
       - name: orders_bronze
         columns:
