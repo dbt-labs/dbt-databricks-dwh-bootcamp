@@ -1,0 +1,24 @@
+models:
+- name: lineitem_silver
+  description: This model filters and selects line items from the 'lineitem_bronze'
+    source table where the order key is not null and the ship date is on or after
+    January 1, 1990. It is used to prepare a refined dataset of line items for further
+    analysis.
+  columns:
+  - name: l_orderkey
+    description: The unique identifier for each order.
+  - name: l_linenumber
+    description: The line number within the order, indicating the sequence of items.
+  - name: l_quantity
+    description: The quantity of the item ordered.
+  - name: l_extendedprice
+    description: The total price for the quantity of items ordered, before discounts
+      and taxes.
+  - name: l_discount
+    description: The discount applied to the extended price.
+  - name: l_tax
+    description: The tax applied to the extended price after discount.
+  - name: l_returnflag
+    description: A flag indicating the return status of the line item.
+  - name: l_linestatus
+    description: The status of the line item, such as whether it is open or closed.

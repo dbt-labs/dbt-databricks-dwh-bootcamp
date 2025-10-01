@@ -1,0 +1,15 @@
+models:
+- name: customer_silver
+  description: This model filters and refines customer data from the 'customer_bronze'
+    source, excluding customers with a null customer key or those from nation key
+    21. It serves as an intermediate layer to provide a cleaner dataset for further
+    analysis or reporting.
+  columns:
+  - name: c_custkey
+    description: A unique identifier for each customer.
+  - name: c_name
+    description: The name of the customer.
+  - name: c_nationkey
+    description: The identifier for the nation associated with the customer.
+  - name: c_acctbal
+    description: The account balance of the customer, represented as a decimal.
